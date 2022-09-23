@@ -1,0 +1,15 @@
+-- Components Division --
+
+-> header
+    |-> logo, search bar, my account, cart
+
+-> main banner | carousel
+
+-> shelf | carousel
+    |-> product cards
+          |-> information, flags, buy button, stars
+
+-> newsletter
+
+-> footer
+    |-> location, contact, additional info
