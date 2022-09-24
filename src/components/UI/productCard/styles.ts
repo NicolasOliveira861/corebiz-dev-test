@@ -1,8 +1,9 @@
-import { FlexCol } from 'styles/ui';
+import { Button, FlexCol } from 'styles/ui';
 import { styled } from '../../../../stitches.config';
 
 export const Container = styled(FlexCol, {
-  justifyContent: 'center',
+  justifyContent: 'flex-start',
+  height: '100%',
 });
 
 export const CardTop = styled('div', {
@@ -10,8 +11,20 @@ export const CardTop = styled('div', {
 });
 
 export const CardBottom = styled(FlexCol, {
+  justifyContent: 'space-between',
   width: '100%',
+  height: '100%',
 
+  '&:hover': {
+    background: '$gray400',
+
+    '.buy-button': {
+      opacity: 1,
+    },
+  },
+});
+
+export const InfoHeader = styled('div', {
   '& > h1': {
     fontWeight: 600,
     fontSize: '0.75rem',
@@ -20,6 +33,13 @@ export const CardBottom = styled(FlexCol, {
     color: '$gray',
     margin: '0.4375rem 0',
   },
+});
+
+export const InfoFooter = styled('div', {
+  display: 'flex',
+  flexDirection: 'column',
+  justifyContent: 'flex-end',
+  height: '100%',
 });
 
 export const ListPrice = styled('span', {
@@ -37,5 +57,19 @@ export const Price = styled('span', {
 });
 
 export const Installments = styled('div', {
-  '& > span': {},
+  '& > span': {
+    fontSize: '0.6875rem',
+    lineHeight: '0.9375rem',
+    color: '$gray',
+  },
+});
+
+export const BuyButton = styled(Button, {
+  height: '2rem',
+  width: '7.8125rem',
+  margin: '0.5rem auto 0.875rem',
+  fontSize: '12px',
+  lineHeight: '16px',
+  fontWeight: 700,
+  opacity: 0,
 });
