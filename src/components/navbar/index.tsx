@@ -25,10 +25,10 @@ const Navbar = () => {
         <>
           <MobileTop>
             <button onClick={() => setMenuIsOpen(true)}>
-              <img src="/ham.svg" />
+              <img src="/ham.svg" alt="Burger menu icon" />
             </button>
 
-            <img src="/logo-corebiz-preto-cinza.svg" />
+            <img src="/logo-corebiz-preto-cinza.svg" alt="Corebiz logo" />
 
             <Cart />
           </MobileTop>
@@ -48,6 +48,7 @@ const Navbar = () => {
                 : {}
             }
             src="/logo-corebiz-preto-cinza.svg"
+            alt="Corebiz logo"
           />
 
           <SearchBar />

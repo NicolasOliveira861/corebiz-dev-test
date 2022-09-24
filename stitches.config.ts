@@ -7,6 +7,7 @@ export const { styled, css, keyframes, getCssText, theme, globalCss } =
         black: '#000000',
         white: '#ffffff',
         gray: '#7A7A7A',
+        gray300: '#BDBDBD',
         red300: '#F8475F',
       },
     },

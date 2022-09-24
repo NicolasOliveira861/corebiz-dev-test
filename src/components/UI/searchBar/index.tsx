@@ -6,7 +6,7 @@ const SearchBar = ({ style }: ReactStyleProps) => {
     <Container style={style}>
       <Input type="text" placeholder="O que está procurando?" />
       <div>
-        <img src="/magnifying-glass.svg" />
+        <img src="/magnifying-glass.svg" alt="Magnifying glass logo" />
       </div>
     </Container>
   );
