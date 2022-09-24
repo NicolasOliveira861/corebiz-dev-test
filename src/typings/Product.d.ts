@@ -5,8 +5,10 @@ export interface Product {
   imageUrl: string;
   listPrice?: number;
   price: number;
-  installments: {
-    quantity: number;
-    value: number;
-  };
+  installments: Installments[];
+}
+
+export interface Installments {
+  quantity: number;
+  value: number;
 }

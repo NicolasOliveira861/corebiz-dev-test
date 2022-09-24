@@ -11,6 +11,7 @@ const GlobalStyles = globalCss({
     letterSpacing: 'normal',
     color: '#000000',
     textAlign: 'center',
+    fontWeight: 400,
   },
 
   button: {

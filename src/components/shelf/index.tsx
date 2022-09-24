@@ -1,3 +1,5 @@
+import ProductCard from 'components/UI/productCard';
+import useDeviceScreen from 'hooks/useDeviceScreen';
 import Carousel from 'nuka-carousel';
 import { Product } from 'typings/Product';
 import { Container } from './styles';
@@ -7,29 +9,17 @@ interface Props {
 }
 
 const Shelf = ({ products }: Props) => {
+  const isMobile = useDeviceScreen(768);
+
   return (
     <Container>
-      <Carousel slidesToShow={4}>
+      <Carousel
+        slidesToShow={4}
+        dragging={isMobile ? true : false}
+        cellSpacing={99}
+      >
         {products.map((product) => (
-          <div key={product.productId}>
-            <img src={product.imageUrl} alt={product.productName} />
-
-            <h1>{product.productName}</h1>
-
-            <span>{product.stars}</span>
-
-            {product.listPrice && <span>{product.listPrice}</span>}
-
-            <span>{product.price}</span>
-
-            <div>
-              {product.installments.quantity}
-
-              {product.installments.value}
-            </div>
-
-            <button>Teste</button>
-          </div>
+          <ProductCard product={product} />
         ))}
       </Carousel>
     </Container>
