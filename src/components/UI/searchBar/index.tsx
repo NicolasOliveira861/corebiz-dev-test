@@ -1,8 +1,9 @@
+import { ReactStyleProps } from 'typings/ReactStyleProps';
 import { Container, Input } from './styles';
 
-const SearchBar = () => {
+const SearchBar = ({ style }: ReactStyleProps) => {
   return (
-    <Container>
+    <Container style={style}>
       <Input type="text" placeholder="O que está procurando?" />
       <div>
         <img src="/magnifying-glass.svg" />

@@ -1,23 +1,62 @@
-import { FlexRowCenter } from '../../styles/ui';
+import { useContext } from 'react';
+import MyAccount from 'components/UI/myAccount';
+import useDeviceScreen from 'hooks/useDeviceScreen';
 import Cart from '../cart';
 import SearchBar from '../UI/searchBar';
-import { Container, Href } from './styles';
+import { Container, MobileTop, MobileBottom } from './styles';
+import { StoreContext } from 'context/StoreContext';
 
 const Navbar = () => {
+  const { setMenuIsOpen } = useContext(StoreContext);
+
+  const isMobile = useDeviceScreen(1024);
+
   return (
-    <Container>
-      <img src="/logo-corebiz-preto-cinza.svg" />
+    <Container
+      style={
+        isMobile
+          ? {
+              padding: 0,
+            }
+          : {}
+      }
+    >
+      {isMobile ? (
+        <>
+          <MobileTop>
+            <button onClick={() => setMenuIsOpen(true)}>
+              <img src="/ham.svg" />
+            </button>
 
-      <SearchBar />
+            <img src="/logo-corebiz-preto-cinza.svg" />
 
-      <Href href="/#">
-        <FlexRowCenter>
-          <img src="/user.svg" />
-          <span>Minha Conta</span>
-        </FlexRowCenter>
-      </Href>
+            <Cart />
+          </MobileTop>
 
-      <Cart />
+          <MobileBottom>
+            <SearchBar />
+          </MobileBottom>
+        </>
+      ) : (
+        <>
+          <img
+            style={
+              isMobile
+                ? {
+                    flex: '33%',
+                  }
+                : {}
+            }
+            src="/logo-corebiz-preto-cinza.svg"
+          />
+
+          <SearchBar />
+
+          <MyAccount />
+
+          <Cart />
+        </>
+      )}
     </Container>
   );
 };

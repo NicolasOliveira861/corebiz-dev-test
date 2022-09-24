@@ -1,13 +1,17 @@
 import { useContext } from 'react';
-import { StoreContext } from '../../context/StoreContext';
+import { StoreContext } from 'context/StoreContext';
+import { FlexRowCenter } from 'styles/ui';
+import { Counter } from './styles';
+import { ReactStyleProps } from 'typings/ReactStyleProps';
 
-const Cart = () => {
+const Cart = ({ style }: ReactStyleProps) => {
   const { itemsCount } = useContext(StoreContext);
 
   return (
-    <div>
-      <span>{itemsCount}</span>
-    </div>
+    <FlexRowCenter style={style}>
+      <img src="/cart.svg" />
+      <Counter>{itemsCount}</Counter>
+    </FlexRowCenter>
   );
 };
 

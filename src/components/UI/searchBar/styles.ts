@@ -4,10 +4,15 @@ import { FlexRow } from '../../../styles/ui';
 export const Container = styled(FlexRow, {
   marginLeft: '7.5625rem',
   justifyContent: 'space-between',
-  width: '44.875rem',
-  maxWidth: '100%',
+  maxWidth: '44.875rem',
+  width: '100%',
   borderBottom: '1px solid $gray',
   padding: '5px 0',
+  flex: '25%',
+
+  '@max_md': {
+    marginLeft: 0,
+  },
 });
 
 export const Input = styled('input', {
