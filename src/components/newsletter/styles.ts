@@ -36,6 +36,10 @@ export const Form = styled('form', {
   },
 });
 
+export const InputContainer = styled('div', {
+  position: 'relative',
+});
+
 export const Input = styled('input', {
   fontSize: '0.75rem',
   lineHeight: '0.875rem',
@@ -48,7 +52,18 @@ export const Input = styled('input', {
   background: '$white',
   textAlign: 'left',
   padding: '0 1rem',
-  border: 'none',
+  border: '1px solid $gray300',
+  position: 'relative',
+  transition: 'outline-color .3s',
+
+  '&.error': {
+    border: '1px solid $red400',
+
+    '&:focus': {
+      outlineWidth: '2px',
+      outlineColor: '$red400',
+    },
+  },
 
   '&:placeholder': {
     fontSize: '0.75rem',
@@ -67,9 +82,24 @@ export const Input = styled('input', {
   },
 });
 
+export const ErrorMsg = styled('p', {
+  fontSize: '0.75rem',
+  lineHeight: '0.75rem',
+  color: '$red400',
+  fontFamily: 'Lato, sans-serif',
+  position: 'absolute',
+  top: 'calc(100% + 0.5rem)',
+  left: 0,
+});
+
 export const SignButton = styled(Button, {
   width: '8.75rem',
   height: '3rem',
+  transition: '.2s',
+
+  '&:hover': {
+    background: '$gray700',
+  },
 
   '@max_sm': {
     marginTop: '0.4375rem',

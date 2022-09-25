@@ -13,6 +13,7 @@ export const { styled, css, keyframes, getCssText, theme, globalCss } =
         gray400: '#E6E8EA',
         gray300: '#BDBDBD',
         gray200: '#F2F2F2',
+        red400: '#D7182A',
         red300: '#F8475F',
       },
     },
