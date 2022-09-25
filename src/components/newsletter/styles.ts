@@ -38,6 +38,10 @@ export const Form = styled('form', {
 
 export const InputContainer = styled('div', {
   position: 'relative',
+
+  '@max_sm': {
+    width: '100%',
+  },
 });
 
 export const Input = styled('input', {

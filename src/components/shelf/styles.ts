@@ -5,6 +5,40 @@ export const Container = styled('div', {
   maxWidth: '1250px',
   margin: '1.5625rem auto 4.3125rem',
 
+  '.slider-control-bottomcenter': {
+    position: 'absolute',
+    bottom: '-1.25rem',
+
+    '& .shelf-custom-paging-dots': {
+      display: 'flex',
+      columnGap: '0.5rem',
+
+      '& .paging-item': {
+        '& .shelf-custom-paging-dot': {
+          fill: '$gray300 !important',
+          opacity: '1 !important',
+
+          '& .paging-dot': {
+            width: '0.625rem',
+            height: '0.625rem',
+          },
+        },
+
+        '&.active': {
+          '& .shelf-custom-paging-dot': {
+            fill: '$red300 !important',
+          },
+        },
+      },
+    },
+  },
+
+  '@min_md': {
+    '.slider-control-bottomcenter': {
+      display: 'none',
+    },
+  },
+
   '@max_sm': {
     margin: '0',
     padding: '1rem 0.4375rem 2.5rem',

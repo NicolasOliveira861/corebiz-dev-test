@@ -21,7 +21,10 @@ const Shelf = ({ products }: Props) => {
         pauseOnHover
         slidesToShow={isMobile ? 2 : 4}
         dragging={isMobile ? true : false}
-        renderBottomCenterControls={() => <></>}
+        defaultControlsConfig={{
+          pagingDotsContainerClassName: 'shelf-custom-paging-dots',
+          pagingDotsClassName: 'shelf-custom-paging-dot',
+        }}
         renderCenterLeftControls={(slider) => (
           <Arrow direction="left" onClick={() => slider.previousSlide()} />
         )}
