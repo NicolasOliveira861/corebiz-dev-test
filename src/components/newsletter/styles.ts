@@ -106,3 +106,31 @@ export const SignButton = styled(Button, {
     width: '100%',
   },
 });
+
+export const SuccessContainer = styled(Container, {
+  rowGap: 0,
+});
+
+export const SucessTitle = styled('h1', {
+  fontSize: '0.875rem',
+  lineHeight: '0.875rem',
+  fontWeight: 700,
+  color: '$black',
+  fontFamily: 'Lato, sans-serif',
+});
+
+export const SuccessSubtitle = styled('h2', {
+  fontSize: '0.75rem',
+  lineHeight: '0.75rem',
+  fontWeight: 400,
+  color: '$gray700',
+  fontFamily: 'Lato, sans-serif',
+});
+
+export const NewEmailBtn = styled(SignButton, {
+  width: '20.5rem',
+  fontWeight: 700,
+  fontSize: '0.875rem',
+  lineHeight: '0.875rem',
+  marginTop: '0.9375rem',
+});
