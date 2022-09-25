@@ -1,8 +1,9 @@
+import { Arrow } from 'components/UI/arrows';
 import ProductCard from 'components/UI/productCard';
 import useDeviceScreen from 'hooks/useDeviceScreen';
 import Carousel from 'nuka-carousel';
 import { Product } from 'typings/Product';
-import { Container } from './styles';
+import { Container, Title } from './styles';
 
 interface Props {
   products: Product[];
@@ -13,10 +14,22 @@ const Shelf = ({ products }: Props) => {
 
   return (
     <Container>
+      <Title>Mais Vendidos</Title>
       <Carousel
-        slidesToShow={4}
+        autoplay
+        autoplayInterval={5000}
+        pauseOnHover
+        slidesToShow={isMobile ? 2 : 4}
         dragging={isMobile ? true : false}
-        cellSpacing={99}
+        renderBottomCenterControls={() => <></>}
+        renderCenterLeftControls={(slider) => (
+          <Arrow direction="left" onClick={() => slider.previousSlide()} />
+        )}
+        renderCenterRightControls={(slider) => (
+          <Arrow direction="right" onClick={() => slider.nextSlide()} />
+        )}
+        wrapAround={true}
+        cellSpacing={isMobile ? 24 : 99}
       >
         {products.map((product) => (
           <ProductCard product={product} />

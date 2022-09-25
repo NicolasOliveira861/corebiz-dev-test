@@ -3,6 +3,8 @@ import { useContext } from 'react';
 import { Product } from 'typings/Product';
 import { GetHigherInstallment } from 'utils/installments';
 import { PriceFormatter } from 'utils/price';
+import OffFlag from '../promotionFlag';
+import Stars from '../stars';
 import {
   BuyButton,
   CardBottom,
@@ -26,6 +28,8 @@ const ProductCard = ({ product }: Props) => {
   return (
     <Container key={product.productId}>
       <CardTop>
+        {product.listPrice && <OffFlag />}
+
         <img src={product.imageUrl} alt={product.productName} />
       </CardTop>
 
@@ -33,7 +37,7 @@ const ProductCard = ({ product }: Props) => {
         <InfoHeader>
           <h1>{product.productName}</h1>
 
-          <span>{product.stars}</span>
+          <Stars filledStarsQuantity={product.stars} />
         </InfoHeader>
 
         <InfoFooter>
@@ -43,12 +47,21 @@ const ProductCard = ({ product }: Props) => {
 
           <Price>por {PriceFormatter('R$ ', product.price)}</Price>
 
-          {productInstallments.value && (
+          {productInstallments.value ? (
             <Installments>
               <span>
                 ou em {productInstallments.quantity}x de{' '}
                 {PriceFormatter('R$ ', productInstallments.value)}
               </span>
+            </Installments>
+          ) : (
+            <Installments
+              style={{
+                opacity: 0,
+                visibility: 'hidden',
+              }}
+            >
+              .
             </Installments>
           )}
 

@@ -8,12 +8,19 @@ export const Container = styled(FlexCol, {
 
 export const CardTop = styled('div', {
   width: '100%',
+  position: 'relative',
 });
 
 export const CardBottom = styled(FlexCol, {
   justifyContent: 'space-between',
   width: '100%',
   height: '100%',
+
+  '@max_sm': {
+    '.buy-button': {
+      opacity: 1,
+    },
+  },
 
   '&:hover': {
     background: '$gray400',
@@ -47,6 +54,11 @@ export const ListPrice = styled('span', {
   fontSize: '0.75rem',
   lineHeight: '1rem',
   margin: '0.4375rem 0 0.125rem',
+  textDecoration: 'line-through',
+
+  '@max_sm': {
+    fontSize: '0.6875rem',
+  },
 });
 
 export const Price = styled('span', {
@@ -54,6 +66,10 @@ export const Price = styled('span', {
   fontWeight: 700,
   fontSize: '1.125rem',
   lineHeight: '1.5625rem',
+
+  '@max_sm': {
+    fontSize: '1rem',
+  },
 });
 
 export const Installments = styled('div', {
