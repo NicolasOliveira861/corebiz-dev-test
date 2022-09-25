@@ -19,10 +19,12 @@ const MainBanner = ({ images, mobileImages }: MainBannerProps) => {
     <Container>
       <Carousel
         autoplay
+        autoplayInterval={5000}
         dragging
         renderCenterLeftControls={() => <></>}
         renderCenterRightControls={() => <></>}
         pauseOnHover
+        wrapAround
         defaultControlsConfig={{
           pagingDotsContainerClassName: 'custom-paging-dots',
           pagingDotsClassName: 'custom-paging-dot',
@@ -30,10 +32,18 @@ const MainBanner = ({ images, mobileImages }: MainBannerProps) => {
       >
         {isMobile
           ? mobileImages.map((image) => (
-              <img src={image.imageUrl} alt={image.imageTitle} />
+              <img
+                key={image.imageTitle}
+                src={image.imageUrl}
+                alt={image.imageTitle}
+              />
             ))
           : images.map((image) => (
-              <img src={image.imageUrl} alt={image.imageTitle} />
+              <img
+                key={image.imageTitle}
+                src={image.imageUrl}
+                alt={image.imageTitle}
+              />
             ))}
       </Carousel>
     </Container>

@@ -4,6 +4,7 @@ import Sidebar from 'components/sidebar';
 import Navbar from '../../components/navbar';
 import { Product } from 'typings/Product';
 import Shelf from 'components/shelf';
+import Newsletter from 'components/newsletter';
 
 const banners: MainBannerImageProps[] = [
   {
@@ -44,6 +45,8 @@ const Home = () => {
       <MainBanner images={banners} mobileImages={mobileBanners} />
 
       <Shelf products={products} />
+
+      <Newsletter />
     </>
   );
 };

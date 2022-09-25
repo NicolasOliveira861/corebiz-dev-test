@@ -10,12 +10,12 @@ const Stars = ({ filledStarsQuantity }: Props) => {
 
   return (
     <Container>
-      {[...Array(filledStarsQuantity)].map(() => (
-        <img src="/filledStar.svg" />
+      {[...Array(filledStarsQuantity)].map((item, idx) => (
+        <img src="/filledStar.svg" alt="Estrela pintada" key={idx} />
       ))}
 
-      {[...Array(blankStarsQty)].map(() => (
-        <img src="/emptyStar.svg" />
+      {[...Array(blankStarsQty)].map((item, idx) => (
+        <img src="/emptyStar.svg" alt="Estrela vazia" key={idx} />
       ))}
     </Container>
   );

@@ -6,10 +6,13 @@ export const { styled, css, keyframes, getCssText, theme, globalCss } =
       colors: {
         black: '#000000',
         white: '#ffffff',
+        gray700: '#333333',
+        gray600: '#585858',
         gray: '#7A7A7A',
         gray500: '#C0C0C0',
         gray400: '#E6E8EA',
         gray300: '#BDBDBD',
+        gray200: '#F2F2F2',
         red300: '#F8475F',
       },
     },

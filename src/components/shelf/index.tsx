@@ -32,7 +32,7 @@ const Shelf = ({ products }: Props) => {
         cellSpacing={isMobile ? 24 : 99}
       >
         {products.map((product) => (
-          <ProductCard product={product} />
+          <ProductCard key={product.productId} product={product} />
         ))}
       </Carousel>
     </Container>
