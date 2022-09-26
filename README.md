@@ -1,4 +1,4 @@
-# Teste de Desenvolvimento Corebi
+# Teste de Desenvolvimento Corebiz
 
 <br />
 <p>Veja o projeto no Github Pages: <a href="https://bit.ly/3DUH8Nl" target="_blank">Demo</a></p>
