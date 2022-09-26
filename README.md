@@ -2,7 +2,7 @@
 Project developed to show my skills to Corebiz dev team
 
 <br />
-<p>Veja o projeto no Github Pages: <a targer="_blank" rel="norreferrer" href="https://bit.ly/3DUH8Nl">Demo</a></p>
+<p>Veja o projeto no Github Pages: <a target="_blank" rel="norreferrer" href="https://bit.ly/3DUH8Nl">Demo</a></p>
 <br />
 
 <h1>Como rodar o projeto</h1>
