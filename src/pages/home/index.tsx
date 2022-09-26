@@ -6,6 +6,7 @@ import { Product } from 'typings/Product';
 import Shelf from 'components/shelf';
 import Newsletter from 'components/newsletter';
 import Footer from 'components/footer';
+import Minicart from 'components/minicart';
 
 const banners: MainBannerImageProps[] = [
   {
@@ -42,6 +43,7 @@ const Home = () => {
     <>
       <Navbar />
       <Sidebar />
+      <Minicart />
 
       <MainBanner images={banners} mobileImages={mobileBanners} />
 

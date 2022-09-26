@@ -5,12 +5,16 @@ import { Counter } from './styles';
 import { ReactStyleProps } from 'typings/ReactStyleProps';
 
 const Cart = ({ style }: ReactStyleProps) => {
-  const { itemsCount } = useContext(StoreContext);
+  const { setMinicartIsOpen, orderForm } = useContext(StoreContext);
 
   return (
-    <FlexRowCenter style={style}>
+    <FlexRowCenter
+      as={'button'}
+      onClick={() => setMinicartIsOpen(true)}
+      style={style}
+    >
       <img src="/cart.svg" />
-      <Counter>{itemsCount}</Counter>
+      <Counter>{orderForm.items.length}</Counter>
     </FlexRowCenter>
   );
 };

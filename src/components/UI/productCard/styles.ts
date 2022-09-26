@@ -31,15 +31,15 @@ export const CardBottom = styled(FlexCol, {
   },
 });
 
-export const InfoHeader = styled('div', {
-  '& > h1': {
-    fontWeight: 600,
-    fontSize: '0.75rem',
-    lineHeight: '1rem',
-    textAlign: 'center',
-    color: '$gray',
-    margin: '0.4375rem 0',
-  },
+export const InfoHeader = styled('div', {});
+
+export const ProductName = styled('h1', {
+  fontWeight: 600,
+  fontSize: '0.75rem',
+  lineHeight: '1rem',
+  textAlign: 'center',
+  color: '$gray',
+  margin: '0.4375rem 0',
 });
 
 export const InfoFooter = styled('div', {

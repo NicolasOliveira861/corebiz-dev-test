@@ -15,6 +15,7 @@ import {
   Installments,
   ListPrice,
   Price,
+  ProductName,
 } from './styles';
 
 interface Props {
@@ -22,8 +23,34 @@ interface Props {
 }
 
 const ProductCard = ({ product }: Props) => {
-  const { setItemsCount } = useContext(StoreContext);
+  const { setOrderForm } = useContext(StoreContext);
+  const item = { ...product, quantity: 1 };
   const productInstallments = GetHigherInstallment(product.installments);
+
+  const handleAddToCart = () => {
+    setOrderForm((prev) => {
+      const alreadyHasProductId = prev.items.find(
+        (item) => item.productId === product.productId
+      );
+
+      if (!alreadyHasProductId) {
+        return {
+          items: [...prev.items, item],
+        };
+      } else {
+        return {
+          items: [
+            ...prev.items.map((prevItem) => {
+              return {
+                ...prevItem,
+                quantity: prevItem.quantity + 1,
+              };
+            }),
+          ],
+        };
+      }
+    });
+  };
 
   return (
     <Container key={product.productId}>
@@ -35,7 +62,7 @@ const ProductCard = ({ product }: Props) => {
 
       <CardBottom>
         <InfoHeader>
-          <h1>{product.productName}</h1>
+          <ProductName>{product.productName}</ProductName>
 
           <Stars filledStarsQuantity={product.stars} />
         </InfoHeader>
@@ -69,7 +96,7 @@ const ProductCard = ({ product }: Props) => {
             className="buy-button"
             type="button"
             onClick={() => {
-              setItemsCount((oldValue) => oldValue + 1);
+              handleAddToCart();
             }}
           >
             Comprar
