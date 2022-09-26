@@ -1,8 +1,9 @@
 {
   "name": "vite-project",
   "private": true,
-  "version": "0.0.1",
+  "version": "0.0.2",
   "type": "module",
+  "homepage": "https://github.com/NicolasOliveira861/corebiz-dev-test",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
@@ -10,19 +11,18 @@
   },
   "dependencies": {
     "@stitches/react": "^1.2.8",
-    "@types/react-router-dom": "^5.3.3",
     "nuka-carousel": "^5.4.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.4.1",
-    "vite-tsconfig-paths": "^3.5.0"
+    "react-router-dom": "^6.4.1"
   },
   "devDependencies": {
     "@types/react": "^18.0.17",
     "@types/react-dom": "^18.0.6",
+    "@types/react-router-dom": "^5.3.3",
     "@vitejs/plugin-react": "^2.1.0",
     "typescript": "^4.6.4",
-    "vite": "^3.1.0"
+    "vite": "^3.1.0",
+    "vite-tsconfig-paths": "^3.5.1"
   }
 }
-
