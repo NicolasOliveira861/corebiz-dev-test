@@ -5,6 +5,7 @@ import Navbar from '../../components/navbar';
 import { Product } from 'typings/Product';
 import Shelf from 'components/shelf';
 import Newsletter from 'components/newsletter';
+import Footer from 'components/footer';
 
 const banners: MainBannerImageProps[] = [
   {
@@ -47,6 +48,8 @@ const Home = () => {
       <Shelf products={products} />
 
       <Newsletter />
+
+      <Footer />
     </>
   );
 };
