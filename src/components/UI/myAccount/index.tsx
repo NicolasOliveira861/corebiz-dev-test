@@ -6,7 +6,7 @@ const MyAccount = ({ style }: ReactStyleProps) => {
   return (
     <Href style={style} href="/#">
       <FlexRowCenter style={{ columnGap: '0.3125rem' }}>
-        <img src="/user.svg" alt="User logo" />
+        <img src="/corebiz-dev-test/user.svg" alt="User logo" />
         <span>Minha Conta</span>
       </FlexRowCenter>
     </Href>

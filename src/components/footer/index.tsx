@@ -24,20 +24,20 @@ const Footer = () => {
 
         <LinksContainer>
           <FooterLink>
-            <img src="/mail.svg" alt="Email icon" />
+            <img src="/corebiz-dev-test/mail.svg" alt="Email icon" />
             ENTRE EM CONTATO
           </FooterLink>
 
           <FooterLink>
-            <img src="/headphone.svg" alt="Headphone icon" />
+            <img src="/corebiz-dev-test/headphone.svg" alt="Headphone icon" />
             FALE COM O NOSSO CONSULTOR ONLINE
           </FooterLink>
         </LinksContainer>
 
         <LogosContainer>
-          <img src="/created-by.png" />
+          <img src="/corebiz-dev-test/created-by.png" />
 
-          <img src="/powered-by.png" />
+          <img src="/corebiz-dev-test/powered-by.png" />
         </LogosContainer>
       </Content>
     </Container>

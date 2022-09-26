@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.2",
   "type": "module",
-  "homepage": "https://github.com/NicolasOliveira861/corebiz-dev-test",
+  "homepage": "https://NicolasOliveira861.github.io/corebiz-dev-test",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",

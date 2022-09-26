@@ -1,13 +1,14 @@
+import Store from 'context/StoreContext';
 import { Routes, Route, HashRouter } from 'react-router-dom';
 import Home from './pages/home';
 
 const Router = () => {
   return (
-    <HashRouter>
+    <Store>
       <Routes>
         <Route path="/" element={<Home />} />
       </Routes>
-    </HashRouter>
+    </Store>
   );
 };
 

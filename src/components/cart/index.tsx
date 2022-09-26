@@ -13,7 +13,7 @@ const Cart = ({ style }: ReactStyleProps) => {
       onClick={() => setMinicartIsOpen(true)}
       style={style}
     >
-      <img src="/cart.svg" />
+      <img src="/corebiz-dev-test/cart.svg" />
       <Counter>{orderForm.items.length}</Counter>
     </FlexRowCenter>
   );

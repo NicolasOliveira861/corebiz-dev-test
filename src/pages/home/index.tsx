@@ -11,22 +11,22 @@ import Minicart from 'components/minicart';
 const banners: MainBannerImageProps[] = [
   {
     imageTitle: 'Corebiz main banner 1',
-    imageUrl: '/main-banner.png',
+    imageUrl: '/corebiz-dev-test/main-banner.png',
   },
   {
     imageTitle: 'Corebiz main banner 2',
-    imageUrl: '/main-banner.png',
+    imageUrl: '/corebiz-dev-test/main-banner.png',
   },
 ];
 
 const mobileBanners: MainBannerImageProps[] = [
   {
     imageTitle: 'Corebiz main banner mobile 1',
-    imageUrl: '/main-banner-mobile_2.png',
+    imageUrl: '/corebiz-dev-test/main-banner-mobile_2.png',
   },
   {
     imageTitle: 'Corebiz main banner mobile 2',
-    imageUrl: '/main-banner-mobile_2.png',
+    imageUrl: '/corebiz-dev-test/main-banner-mobile_2.png',
   },
 ];
 
